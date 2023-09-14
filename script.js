@@ -3,7 +3,7 @@
 // let bandNames = ['The Rolling Stones', 'Aerosmith', 'Led Zeppelin', 'The Beatles', 'Nirvana'];
 
 // Remove articles from band names and sort them
-bandNames = bandNames.map(name => {
+band = band.map(name => {
   // Remove articles 'a', 'an', 'the' (case-insensitive)
   return name.replace(/^(a|an|the)\s+/i, '');
 }).sort();
