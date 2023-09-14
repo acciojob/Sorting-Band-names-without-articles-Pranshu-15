@@ -8,12 +8,12 @@ bandNames = bandNames.map(name => {
   return name.replace(/^(a|an|the)\s+/i, '');
 }).sort();
 
-// Get the ul element with id 'band'
-const ulElement = document.getElementById('band');
+// // Get the ul element with id 'band'
+// const ulElement = document.getElementById('band');
 
-// Iterate through sorted band names and create li elements
-bandNames.forEach(name => {
-  const liElement = document.createElement('li');
-  liElement.textContent = name;
-  ulElement.appendChild(liElement);
-});
+// // Iterate through sorted band names and create li elements
+// bandNames.forEach(name => {
+//   const liElement = document.createElement('li');
+//   liElement.textContent = name;
+//   ulElement.appendChild(liElement);
+// });
