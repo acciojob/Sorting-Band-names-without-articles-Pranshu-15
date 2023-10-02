@@ -5,7 +5,7 @@
 // Remove articles from band names and sort them
 band = band.map(name => {
   // Remove articles 'a', 'an', 'the' (case-insensitive)
-  return name.replace(/^(a|an|the)\s+/i, '');
+  return name.replace(/^(a|an|the)\s/i, '');
 }).sort();
 
 // // Get the ul element with id 'band'
