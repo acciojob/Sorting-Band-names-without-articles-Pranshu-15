@@ -1,6 +1,6 @@
 //your code here
 
-let bandNames = ['The Rolling Stones', 'Aerosmith', 'Led Zeppelin', 'The Beatles', 'Nirvana'];
+let band = ['The Rolling Stones', 'Aerosmith', 'Led Zeppelin', 'The Beatles', 'Nirvana'];
 
 // Remove articles from band names and sort them
 band = band.map(name => {
