@@ -1,19 +1,25 @@
-//your code here
+// Array of band names
+        let bandNames = ['The Beatles', 'Aerosmith', 'Led Zeppelin', 'Red Hot Chili Peppers', 'The Rolling Stones', 'Guns N\' Roses'];
 
-let band = ['The Rolling Stones', 'Aerosmith', 'Led Zeppelin', 'The Beatles', 'Nirvana'];
+        // Regular expression to match articles at the beginning of a string
+        const articleRegex = /^(a|an|the)\s/i;
 
-// Remove articles from band names and sort them
-band = band.map(name => {
-  // Remove articles 'a', 'an', 'the' (case-insensitive)
-  return name.replace(/^(a|an|the)\s/i, '');
-}).sort();
+        // Sort the band names lexicographically, excluding articles
+        bandNames.sort((a, b) => {
+            // Remove articles and trim leading/trailing spaces
+            const nameA = a.replace(articleRegex, '').trim();
+            const nameB = b.replace(articleRegex, '').trim();
 
-// // Get the ul element with id 'band'
-const ulElement = document.getElementById('band');
+            // Compare the modified band names for sorting
+            return nameA.localeCompare(nameB);
+        });
 
-// // Iterate through sorted band names and create li elements
-bandNames.forEach(name => {
-  const liElement = document.createElement('li');
-  liElement.textContent = name;
-  ulElement.appendChild(liElement);
-});
+        // Get the <ul> element by its id
+        const ulElement = document.getElementById('band');
+
+        // Loop through the sorted band names and create <li> elements
+        bandNames.forEach((bandName) => {
+            const liElement = document.createElement('li');
+            liElement.textContent = bandName;
+            ulElement.appendChild(liElement);
+        });
